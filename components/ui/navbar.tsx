@@ -5,14 +5,21 @@ import {useConvexAuth} from "convex/react";
 import {SignInButton, UserButton, useUser} from "@clerk/clerk-react"
 import useScrollTop from "@/hooks/use-scroll-top";
 import { cn } from "@/lib/utils";
-import Logo from "./logo";
+import Logo from "@/components/ui/logo";
 import { ModeToggle } from "@/components/mode-toggle";
 import { Button } from "@/components/ui/button";
 import Spinner from "@/components/ui/spinner";
 import { Authenticated, Unauthenticated, AuthLoading } from "convex/react";
 import Link from "next/link";
+import { useEffect, useState } from 'react';
 
 const Navbar = () => {
+    const [isHomePage, setIsHomePage] = useState(false);
+
+    useEffect(() => {
+        setIsHomePage(window.location.pathname === '/');
+    }, [isHomePage]); // Depend on router.pathname to re-run when the route changes
+
     const { isLoading, isAuthenticated } = useConvexAuth();
     const { user } = useUser();
 
@@ -43,11 +50,14 @@ const Navbar = () => {
                 </Unauthenticated>
                 <Authenticated>
                     <>
-                        <Button variant="ghost" size="sm"> 
-                            <Link href="/documents">
-                                Enter {appName} 
-                            </Link>
-                        </Button>
+                        {
+                            isHomePage && (
+                                <Button variant="ghost" size="sm"> 
+                                    <Link href="/builder">
+                                        Enter {appName} 
+                                    </Link>
+                                </Button>
+                        )}
                         <UserButton 
                             afterSignOutUrl="/"
                         />

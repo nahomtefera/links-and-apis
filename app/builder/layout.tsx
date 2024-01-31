@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "@/components/ui/navbar";
 
-const MarketingLayout = ({children}: {children: React.ReactNode}) => {
+const BuilderLayout = ({children}: {children: React.ReactNode}) => {
     return ( 
         <div className="h-full dark:dark-background">
             <Navbar />
@@ -12,4 +12,4 @@ const MarketingLayout = ({children}: {children: React.ReactNode}) => {
      );
 }
  
-export default MarketingLayout;
+export default BuilderLayout;
