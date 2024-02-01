@@ -85,3 +85,63 @@ body,
     @apply bg-background text-foreground;
   }
 }
+
+
+
+/* Apply the animation to your div */
+.slide-down {
+  animation: slideDown 1s ease forwards; /* Adjust time and easing as needed */
+  /* Add additional styling as needed */
+}
+
+.slide-up {
+  animation: slideUp 1s ease forwards; /* Adjust time and easing as needed */
+  /* Add additional styling as needed */
+}
+
+.slide-left {
+  animation: slideLeft 1s ease forwards; /* Adjust time and easing as needed */
+  /* Add additional styling as needed */
+}
+
+.slide-right {
+  animation: slideRight 1s ease forwards; /* Adjust time and easing as needed */
+  /* Add additional styling as needed */
+}
+
+/* Keyframes for the animation */
+@keyframes slideDown {
+  from {
+    transform: translateY(-15%); /* Start above the screen */
+  }
+  to {
+    transform: translateY(0); /* End at its original position */
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(15%); /* Start above the screen */
+  }
+  to {
+    transform: translateY(0); /* End at its original position */
+  }
+}
+
+@keyframes slideLeft {
+  from {
+    transform: translateX(35%); /* Start above the screen */
+  }
+  to {
+    transform: translateX(0); /* End at its original position */
+  }
+}
+
+@keyframes slideRight {
+  from {
+    transform: translateX(-15%); /* Start above the screen */
+  }
+  to {
+    transform: translateX(0); /* End at its original position */
+  }
+}

@@ -19,10 +19,10 @@ const BuilderPage = () => {
       <div className="flex flex-col items-center justify-center md:justify-start text-center gap-y-8 flex-1 px-6 pb-10">
         <div className="w-full">
           <div className="flex">
-              <div className="w-1/2 "> 
+              <div className="w-1/2 px-4 flex items-center justify-center"> 
                   <Composer page={composerPage} />
               </div>
-              <div className="w-1/2"> 
+              <div className="w-1/2 flex items-center justify-center border-l border-l-gray-100 dark:border-l-gray-900"> 
                   <Preview />
               </div>
           </div>
