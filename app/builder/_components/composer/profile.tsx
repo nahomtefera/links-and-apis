@@ -25,7 +25,7 @@ const Profile = () => {
             <div className="grid w-full max-w-sm items-center gap-2">
                 <span className="text-left text-xs font-semibold">About</span>
                 <Input className="text-xs" type="name" id="name" placeholder="Name" />
-                <Textarea className="text-xs" type="description" id="description" placeholder="Description" />
+                <Textarea className="text-xs" id="description" placeholder="Description" />
                 {/* <Input className="text-xs" type="description" id="description" placeholder="Description" /> */}
                 <br />
                 <span className="text-left text-xs font-semibold">Site</span>

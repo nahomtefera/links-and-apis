@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button"
 import { Activity, Brush, Layers, User, Menu } from "lucide-react"
 
-const ComposerToolbar = ({handleComposerPageChange}) => {
+const ComposerToolbar = ({handleComposerPageChange}:any) => {
 
     return (
         <div className="bg-gray-100 dark:bg-gray-700 mx-auto rounded p-2 mb-2 flex justify-center items-center">
